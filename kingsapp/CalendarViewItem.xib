@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14313.18"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner"/>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="PgZ-o0-hzY" customClass="CalendarViewItem" customModule="KingsApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="260" height="74"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <box fixedFrame="YES" boxType="custom" borderWidth="0.0" title="Lower Line" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="1Qw-Hz-99J">
+                    <rect key="frame" x="29" y="0.0" width="4" height="36"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <view key="contentView" ambiguous="YES" id="Cjx-ce-8s6">
+                        <rect key="frame" x="0.0" y="0.0" width="4" height="36"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    </view>
+                    <color key="borderColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="fillColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </box>
+                <box fixedFrame="YES" boxType="custom" borderWidth="0.0" title="Upper Line" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="veR-D3-4uZ">
+                    <rect key="frame" x="29" y="40" width="4" height="34"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <view key="contentView" ambiguous="YES" id="R4t-kR-J7W">
+                        <rect key="frame" x="0.0" y="0.0" width="4" height="34"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    </view>
+                    <color key="borderColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="fillColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </box>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TGv-Kk-5qj">
+                    <rect key="frame" x="60" y="38" width="174" height="34"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="34" id="kUH-yD-WJR"/>
+                        <constraint firstAttribute="width" constant="170" id="s1m-5q-i7p"/>
+                    </constraints>
+                    <textFieldCell key="cell" alignment="left" title="This is the lecture title label which can be 2 lines" id="Ni9-nN-x4b">
+                        <font key="font" metaFont="systemSemibold" size="13"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="systemBlueColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0bs-cd-fjl">
+                    <rect key="frame" x="60" y="24" width="174" height="11"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="170" id="YMe-zx-r9N"/>
+                    </constraints>
+                    <textFieldCell key="cell" lineBreakMode="truncatingTail" alignment="left" title="Description" id="L10-sM-guy">
+                        <font key="font" metaFont="miniSystem"/>
+                        <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <box hidden="YES" verticalHuggingPriority="750" ambiguous="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="hAG-ky-kon">
+                    <rect key="frame" x="2" y="35" width="258" height="5"/>
+                </box>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e7w-Zr-HWM">
+                    <rect key="frame" x="60" y="11" width="174" height="11"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="170" id="lo6-Rd-dks"/>
+                    </constraints>
+                    <textFieldCell key="cell" lineBreakMode="clipping" alignment="left" title="Waterloo FWB B5" id="ko1-Ge-XYt">
+                        <font key="font" metaFont="miniSystem"/>
+                        <color key="textColor" name="tertiaryLabelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <box fixedFrame="YES" boxType="custom" borderType="none" borderWidth="0.0" cornerRadius="8" title="Time Container" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="U9i-3u-nLp">
+                    <rect key="frame" x="14" y="28" width="34" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <view key="contentView" ambiguous="YES" id="QuM-Eq-ivz">
+                        <rect key="frame" x="0.0" y="0.0" width="34" height="17"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1bB-rR-PcU">
+                                <rect key="frame" x="-2" y="3" width="38" height="11"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="9:30" id="yZ9-Vb-Mgq">
+                                    <font key="font" metaFont="systemSemibold" size="9"/>
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                    </view>
+                    <color key="borderColor" red="1" green="1" blue="1" alpha="0.49803921569999998" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="fillColor" name="systemBlueColor" catalog="System" colorSpace="catalog"/>
+                </box>
+            </subviews>
+            <constraints>
+                <constraint firstItem="hAG-ky-kon" firstAttribute="top" secondItem="TGv-Kk-5qj" secondAttribute="bottom" id="6D1-eg-lli"/>
+                <constraint firstItem="e7w-Zr-HWM" firstAttribute="top" secondItem="0bs-cd-fjl" secondAttribute="bottom" constant="2" id="Xrw-zV-jua"/>
+                <constraint firstItem="0bs-cd-fjl" firstAttribute="top" secondItem="hAG-ky-kon" secondAttribute="bottom" constant="2" id="XzX-CV-Kvx"/>
+                <constraint firstItem="hAG-ky-kon" firstAttribute="centerY" secondItem="PgZ-o0-hzY" secondAttribute="centerY" id="f1l-hn-QKG"/>
+            </constraints>
+            <connections>
+                <outlet property="descriptionLabel" destination="0bs-cd-fjl" id="tLh-yu-JwX"/>
+                <outlet property="infoLabel" destination="e7w-Zr-HWM" id="bjQ-h4-aZI"/>
+                <outlet property="locationLabel" destination="e7w-Zr-HWM" id="3DR-3c-iP9"/>
+                <outlet property="startTimeLabel" destination="1bB-rR-PcU" id="O64-rk-SoA"/>
+                <outlet property="titleLabel" destination="TGv-Kk-5qj" id="9oq-0c-ydz"/>
+            </connections>
+            <point key="canvasLocation" x="43" y="-7"/>
+        </customView>
+    </objects>
+</document>

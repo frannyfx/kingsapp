@@ -1,0 +1,478 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		414A1C1921619EB400EE35C4 /* PrefsWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414A1C1721619EB400EE35C4 /* PrefsWindow.swift */; };
+		414A1C1A21619EB400EE35C4 /* PrefsWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 414A1C1821619EB400EE35C4 /* PrefsWindow.xib */; };
+		417384BA215FD704009D09F6 /* StatusMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417384B9215FD704009D09F6 /* StatusMenuController.swift */; };
+		417384BC215FD89F009D09F6 /* KingsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417384BB215FD89F009D09F6 /* KingsAPI.swift */; };
+		417384CC215FE0D4009D09F6 /* XMLStackParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417384BE215FE0D3009D09F6 /* XMLStackParser.swift */; };
+		417384CD215FE0D4009D09F6 /* XMLReferencingEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417384C0215FE0D3009D09F6 /* XMLReferencingEncoder.swift */; };
+		417384CE215FE0D4009D09F6 /* EncodingErrorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417384C1215FE0D3009D09F6 /* EncodingErrorExtension.swift */; };
+		417384CF215FE0D4009D09F6 /* XMLEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417384C2215FE0D3009D09F6 /* XMLEncoder.swift */; };
+		417384D0215FE0D4009D09F6 /* XMLEncodingStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417384C3215FE0D3009D09F6 /* XMLEncodingStorage.swift */; };
+		417384D1215FE0D4009D09F6 /* DecodingErrorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417384C5215FE0D3009D09F6 /* DecodingErrorExtension.swift */; };
+		417384D2215FE0D4009D09F6 /* XMLUnkeyedDecodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417384C6215FE0D3009D09F6 /* XMLUnkeyedDecodingContainer.swift */; };
+		417384D3215FE0D4009D09F6 /* XMLKeyedDecodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417384C7215FE0D3009D09F6 /* XMLKeyedDecodingContainer.swift */; };
+		417384D4215FE0D4009D09F6 /* XMLDecodingStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417384C8215FE0D3009D09F6 /* XMLDecodingStorage.swift */; };
+		417384D5215FE0D4009D09F6 /* XMLDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417384C9215FE0D3009D09F6 /* XMLDecoder.swift */; };
+		417384D6215FE0D4009D09F6 /* ISO8601DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417384CA215FE0D3009D09F6 /* ISO8601DateFormatter.swift */; };
+		417384D7215FE0D4009D09F6 /* XMLKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417384CB215FE0D3009D09F6 /* XMLKey.swift */; };
+		417384E121604D66009D09F6 /* CalendarViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417384E021604D66009D09F6 /* CalendarViewItem.swift */; };
+		417384E321604EF3009D09F6 /* CalendarViewItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 417384E221604EF3009D09F6 /* CalendarViewItem.xib */; };
+		417384E521605F3A009D09F6 /* CalendarDivider.xib in Resources */ = {isa = PBXBuildFile; fileRef = 417384E421605F3A009D09F6 /* CalendarDivider.xib */; };
+		417384E72160603C009D09F6 /* CalendarDivider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417384E62160603C009D09F6 /* CalendarDivider.swift */; };
+		41BDC5572161C005006EFDF6 /* LaunchAgent.plist in Resources */ = {isa = PBXBuildFile; fileRef = 41BDC5562161C005006EFDF6 /* LaunchAgent.plist */; };
+		41F8AC2C215FCEBA009693BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F8AC2B215FCEBA009693BF /* AppDelegate.swift */; };
+		41F8AC2E215FCEBB009693BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41F8AC2D215FCEBB009693BF /* Assets.xcassets */; };
+		41F8AC31215FCEBB009693BF /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41F8AC2F215FCEBB009693BF /* MainMenu.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		414A1C2F2161B4C200EE35C4 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Contents/Library/LoginItems;
+			dstSubfolderSpec = 1;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		413A27932161B9AA00ED00E7 /* HelperAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperAppDelegate.swift; sourceTree = "<group>"; };
+		413A27952161B9AA00ED00E7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		413A27982161B9AA00ED00E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		413A279A2161B9AA00ED00E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		413A279B2161B9AA00ED00E7 /* kingslauncher.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = kingslauncher.entitlements; sourceTree = "<group>"; };
+		414A1C1721619EB400EE35C4 /* PrefsWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefsWindow.swift; sourceTree = "<group>"; };
+		414A1C1821619EB400EE35C4 /* PrefsWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PrefsWindow.xib; sourceTree = "<group>"; };
+		417384B9215FD704009D09F6 /* StatusMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusMenuController.swift; sourceTree = "<group>"; };
+		417384BB215FD89F009D09F6 /* KingsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KingsAPI.swift; sourceTree = "<group>"; };
+		417384BE215FE0D3009D09F6 /* XMLStackParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XMLStackParser.swift; sourceTree = "<group>"; };
+		417384C0215FE0D3009D09F6 /* XMLReferencingEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XMLReferencingEncoder.swift; sourceTree = "<group>"; };
+		417384C1215FE0D3009D09F6 /* EncodingErrorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EncodingErrorExtension.swift; sourceTree = "<group>"; };
+		417384C2215FE0D3009D09F6 /* XMLEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XMLEncoder.swift; sourceTree = "<group>"; };
+		417384C3215FE0D3009D09F6 /* XMLEncodingStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XMLEncodingStorage.swift; sourceTree = "<group>"; };
+		417384C5215FE0D3009D09F6 /* DecodingErrorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecodingErrorExtension.swift; sourceTree = "<group>"; };
+		417384C6215FE0D3009D09F6 /* XMLUnkeyedDecodingContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XMLUnkeyedDecodingContainer.swift; sourceTree = "<group>"; };
+		417384C7215FE0D3009D09F6 /* XMLKeyedDecodingContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XMLKeyedDecodingContainer.swift; sourceTree = "<group>"; };
+		417384C8215FE0D3009D09F6 /* XMLDecodingStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XMLDecodingStorage.swift; sourceTree = "<group>"; };
+		417384C9215FE0D3009D09F6 /* XMLDecoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XMLDecoder.swift; sourceTree = "<group>"; };
+		417384CA215FE0D3009D09F6 /* ISO8601DateFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISO8601DateFormatter.swift; sourceTree = "<group>"; };
+		417384CB215FE0D3009D09F6 /* XMLKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XMLKey.swift; sourceTree = "<group>"; };
+		417384E021604D66009D09F6 /* CalendarViewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewItem.swift; sourceTree = "<group>"; };
+		417384E221604EF3009D09F6 /* CalendarViewItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalendarViewItem.xib; sourceTree = "<group>"; };
+		417384E421605F3A009D09F6 /* CalendarDivider.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalendarDivider.xib; sourceTree = "<group>"; };
+		417384E62160603C009D09F6 /* CalendarDivider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarDivider.swift; sourceTree = "<group>"; };
+		41BDC5562161C005006EFDF6 /* LaunchAgent.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = LaunchAgent.plist; sourceTree = "<group>"; };
+		41F8AC28215FCEBA009693BF /* KingsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KingsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		41F8AC2B215FCEBA009693BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		41F8AC2D215FCEBB009693BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		41F8AC30215FCEBB009693BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		41F8AC32215FCEBB009693BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		41F8AC33215FCEBB009693BF /* kingsapp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = kingsapp.entitlements; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		41F8AC25215FCEBA009693BF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		413A27922161B9AA00ED00E7 /* kingslauncher */ = {
+			isa = PBXGroup;
+			children = (
+				413A27932161B9AA00ED00E7 /* HelperAppDelegate.swift */,
+				413A27952161B9AA00ED00E7 /* Assets.xcassets */,
+				413A27972161B9AA00ED00E7 /* MainMenu.xib */,
+				413A279A2161B9AA00ED00E7 /* Info.plist */,
+				413A279B2161B9AA00ED00E7 /* kingslauncher.entitlements */,
+			);
+			path = kingslauncher;
+			sourceTree = "<group>";
+		};
+		417384BD215FE0D3009D09F6 /* XMLParsing */ = {
+			isa = PBXGroup;
+			children = (
+				417384BE215FE0D3009D09F6 /* XMLStackParser.swift */,
+				417384BF215FE0D3009D09F6 /* Encoder */,
+				417384C4215FE0D3009D09F6 /* Decoder */,
+				417384CA215FE0D3009D09F6 /* ISO8601DateFormatter.swift */,
+				417384CB215FE0D3009D09F6 /* XMLKey.swift */,
+			);
+			path = XMLParsing;
+			sourceTree = "<group>";
+		};
+		417384BF215FE0D3009D09F6 /* Encoder */ = {
+			isa = PBXGroup;
+			children = (
+				417384C0215FE0D3009D09F6 /* XMLReferencingEncoder.swift */,
+				417384C1215FE0D3009D09F6 /* EncodingErrorExtension.swift */,
+				417384C2215FE0D3009D09F6 /* XMLEncoder.swift */,
+				417384C3215FE0D3009D09F6 /* XMLEncodingStorage.swift */,
+			);
+			path = Encoder;
+			sourceTree = "<group>";
+		};
+		417384C4215FE0D3009D09F6 /* Decoder */ = {
+			isa = PBXGroup;
+			children = (
+				417384C5215FE0D3009D09F6 /* DecodingErrorExtension.swift */,
+				417384C6215FE0D3009D09F6 /* XMLUnkeyedDecodingContainer.swift */,
+				417384C7215FE0D3009D09F6 /* XMLKeyedDecodingContainer.swift */,
+				417384C8215FE0D3009D09F6 /* XMLDecodingStorage.swift */,
+				417384C9215FE0D3009D09F6 /* XMLDecoder.swift */,
+			);
+			path = Decoder;
+			sourceTree = "<group>";
+		};
+		41F8AC1F215FCEBA009693BF = {
+			isa = PBXGroup;
+			children = (
+				41F8AC2A215FCEBA009693BF /* kingsapp */,
+				413A27922161B9AA00ED00E7 /* kingslauncher */,
+				41F8AC29215FCEBA009693BF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		41F8AC29215FCEBA009693BF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				41F8AC28215FCEBA009693BF /* KingsApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		41F8AC2A215FCEBA009693BF /* kingsapp */ = {
+			isa = PBXGroup;
+			children = (
+				41BDC5562161C005006EFDF6 /* LaunchAgent.plist */,
+				417384BD215FE0D3009D09F6 /* XMLParsing */,
+				41F8AC2B215FCEBA009693BF /* AppDelegate.swift */,
+				417384B9215FD704009D09F6 /* StatusMenuController.swift */,
+				417384BB215FD89F009D09F6 /* KingsAPI.swift */,
+				417384E021604D66009D09F6 /* CalendarViewItem.swift */,
+				417384E221604EF3009D09F6 /* CalendarViewItem.xib */,
+				417384E421605F3A009D09F6 /* CalendarDivider.xib */,
+				417384E62160603C009D09F6 /* CalendarDivider.swift */,
+				41F8AC2D215FCEBB009693BF /* Assets.xcassets */,
+				41F8AC2F215FCEBB009693BF /* MainMenu.xib */,
+				414A1C1721619EB400EE35C4 /* PrefsWindow.swift */,
+				414A1C1821619EB400EE35C4 /* PrefsWindow.xib */,
+				41F8AC32215FCEBB009693BF /* Info.plist */,
+				41F8AC33215FCEBB009693BF /* kingsapp.entitlements */,
+			);
+			path = kingsapp;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		41F8AC27215FCEBA009693BF /* KingsApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 41F8AC36215FCEBB009693BF /* Build configuration list for PBXNativeTarget "KingsApp" */;
+			buildPhases = (
+				41F8AC24215FCEBA009693BF /* Sources */,
+				41F8AC25215FCEBA009693BF /* Frameworks */,
+				41F8AC26215FCEBA009693BF /* Resources */,
+				414A1C2F2161B4C200EE35C4 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KingsApp;
+			productName = kingsapp;
+			productReference = 41F8AC28215FCEBA009693BF /* KingsApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		41F8AC20215FCEBA009693BF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1000;
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = vx;
+				TargetAttributes = {
+					41F8AC27215FCEBA009693BF = {
+						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 41F8AC23215FCEBA009693BF /* Build configuration list for PBXProject "kingsapp" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 41F8AC1F215FCEBA009693BF;
+			productRefGroup = 41F8AC29215FCEBA009693BF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				41F8AC27215FCEBA009693BF /* KingsApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		41F8AC26215FCEBA009693BF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				41BDC5572161C005006EFDF6 /* LaunchAgent.plist in Resources */,
+				41F8AC2E215FCEBB009693BF /* Assets.xcassets in Resources */,
+				417384E521605F3A009D09F6 /* CalendarDivider.xib in Resources */,
+				41F8AC31215FCEBB009693BF /* MainMenu.xib in Resources */,
+				414A1C1A21619EB400EE35C4 /* PrefsWindow.xib in Resources */,
+				417384E321604EF3009D09F6 /* CalendarViewItem.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		41F8AC24215FCEBA009693BF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				417384D0215FE0D4009D09F6 /* XMLEncodingStorage.swift in Sources */,
+				417384BA215FD704009D09F6 /* StatusMenuController.swift in Sources */,
+				414A1C1921619EB400EE35C4 /* PrefsWindow.swift in Sources */,
+				417384D2215FE0D4009D09F6 /* XMLUnkeyedDecodingContainer.swift in Sources */,
+				417384CD215FE0D4009D09F6 /* XMLReferencingEncoder.swift in Sources */,
+				41F8AC2C215FCEBA009693BF /* AppDelegate.swift in Sources */,
+				417384E121604D66009D09F6 /* CalendarViewItem.swift in Sources */,
+				417384D1215FE0D4009D09F6 /* DecodingErrorExtension.swift in Sources */,
+				417384CF215FE0D4009D09F6 /* XMLEncoder.swift in Sources */,
+				417384D5215FE0D4009D09F6 /* XMLDecoder.swift in Sources */,
+				417384E72160603C009D09F6 /* CalendarDivider.swift in Sources */,
+				417384BC215FD89F009D09F6 /* KingsAPI.swift in Sources */,
+				417384D6215FE0D4009D09F6 /* ISO8601DateFormatter.swift in Sources */,
+				417384CC215FE0D4009D09F6 /* XMLStackParser.swift in Sources */,
+				417384CE215FE0D4009D09F6 /* EncodingErrorExtension.swift in Sources */,
+				417384D7215FE0D4009D09F6 /* XMLKey.swift in Sources */,
+				417384D4215FE0D4009D09F6 /* XMLDecodingStorage.swift in Sources */,
+				417384D3215FE0D4009D09F6 /* XMLKeyedDecodingContainer.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		413A27972161B9AA00ED00E7 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				413A27982161B9AA00ED00E7 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		41F8AC2F215FCEBB009693BF /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				41F8AC30215FCEBB009693BF /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		41F8AC34215FCEBB009693BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		41F8AC35215FCEBB009693BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		41F8AC37215FCEBB009693BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 3YV37K9D5A;
+				INFOPLIST_FILE = kingsapp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = vx.kingsapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Debug;
+		};
+		41F8AC38215FCEBB009693BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 3YV37K9D5A;
+				INFOPLIST_FILE = kingsapp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = vx.kingsapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		41F8AC23215FCEBA009693BF /* Build configuration list for PBXProject "kingsapp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				41F8AC34215FCEBB009693BF /* Debug */,
+				41F8AC35215FCEBB009693BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		41F8AC36215FCEBB009693BF /* Build configuration list for PBXNativeTarget "KingsApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				41F8AC37215FCEBB009693BF /* Debug */,
+				41F8AC38215FCEBB009693BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 41F8AC20215FCEBA009693BF /* Project object */;
+}

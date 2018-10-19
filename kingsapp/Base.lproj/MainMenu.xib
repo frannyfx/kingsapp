@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14313.18"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
+            <connections>
+                <outlet property="delegate" destination="Voe-Tx-rLC" id="GzC-gU-4Uq"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="kingsapp" customModuleProvider="target">
+            <connections>
+                <outlet property="statusMenu" destination="hwI-2s-1UX" id="Mev-HS-TlS"/>
+            </connections>
+        </customObject>
+        <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
+        <menu id="hwI-2s-1UX">
+            <items>
+                <menuItem isSeparatorItem="YES" title="calendar_end" id="Hm9-iU-Qk3"/>
+                <menuItem title="Last refreshed at:" enabled="NO" id="8B6-7w-of9">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                </menuItem>
+                <menuItem title="Refresh" id="mdi-x4-nbS">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="refreshClicked:" target="ysP-03-b8b" id="Xxr-YW-qx3"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Preferences" id="g9J-uc-0ZA">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="preferencesClicked:" target="ysP-03-b8b" id="mYF-kw-R3C"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Quit" id="7MC-Ku-k8J">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="quitClicked:" target="ysP-03-b8b" id="rYe-52-ws8"/>
+                    </connections>
+                </menuItem>
+            </items>
+        </menu>
+        <customObject id="ysP-03-b8b" customClass="StatusMenuController" customModule="kingsapp" customModuleProvider="target">
+            <connections>
+                <outlet property="lastRefreshItem" destination="8B6-7w-of9" id="5ly-of-kKq"/>
+                <outlet property="refreshItem" destination="mdi-x4-nbS" id="D3U-cY-mhl"/>
+                <outlet property="statusMenu" destination="hwI-2s-1UX" id="a9I-82-l51"/>
+            </connections>
+        </customObject>
+    </objects>
+</document>

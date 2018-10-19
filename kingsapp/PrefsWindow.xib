@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14313.18"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="PrefsWindow" customModule="KingsApp" customModuleProvider="target">
+            <connections>
+                <outlet property="applyButton" destination="akZ-rw-4DN" id="tiL-yG-hBP"/>
+                <outlet property="passwordTextField" destination="7Xs-La-KTG" id="0E0-KO-fdB"/>
+                <outlet property="progressIndicator" destination="ds7-Gy-iCf" id="gt5-g5-qo5"/>
+                <outlet property="usernameTextField" destination="lBN-D7-w3v" id="Dap-yu-Zqo"/>
+                <outlet property="validateButton" destination="NK7-R1-opa" id="aEe-Gl-QeP"/>
+                <outlet property="window" destination="F0z-JX-Cv5" id="gIp-Ho-8D9"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <window title="Preferences" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" releasedWhenClosed="NO" animationBehavior="default" id="F0z-JX-Cv5">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="196" y="240" width="448" height="97"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
+            <view key="contentView" wantsLayer="YES" id="se5-gp-TjO">
+                <rect key="frame" x="0.0" y="0.0" width="448" height="97"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="lBN-D7-w3v">
+                        <rect key="frame" x="20" y="55" width="200" height="22"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="200" id="4KR-Vx-GUi"/>
+                        </constraints>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="Username" drawsBackground="YES" id="Nwr-EY-UrW">
+                            <font key="font" usesAppearanceFont="YES"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="NK7-R1-opa">
+                        <rect key="frame" x="270" y="10" width="89" height="32"/>
+                        <buttonCell key="cell" type="push" title="Validate" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="6Tt-px-gr0">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="validateClicked:" target="-2" id="LNc-gD-DOo"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="akZ-rw-4DN">
+                        <rect key="frame" x="359" y="10" width="75" height="32"/>
+                        <buttonCell key="cell" type="push" title="Apply" bezelStyle="rounded" alignment="center" enabled="NO" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ypC-7C-Uda">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="applyClicked:" target="-2" id="nbf-fH-QZH"/>
+                        </connections>
+                    </button>
+                    <progressIndicator wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="ds7-Gy-iCf">
+                        <rect key="frame" x="20" y="20" width="16" height="16"/>
+                    </progressIndicator>
+                    <secureTextField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="7Xs-La-KTG">
+                        <rect key="frame" x="228" y="55" width="200" height="22"/>
+                        <secureTextFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="Password" drawsBackground="YES" usesSingleLineMode="YES" id="Uz8-pv-hNa">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                            <allowedInputSourceLocales>
+                                <string>NSAllRomanInputSourcesLocaleIdentifier</string>
+                            </allowedInputSourceLocales>
+                        </secureTextFieldCell>
+                    </secureTextField>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="7Xs-La-KTG" firstAttribute="leading" secondItem="lBN-D7-w3v" secondAttribute="trailing" constant="8" symbolic="YES" id="1k9-97-Wzh"/>
+                    <constraint firstAttribute="trailing" secondItem="7Xs-La-KTG" secondAttribute="trailing" constant="20" id="5Sx-1E-NQG"/>
+                    <constraint firstAttribute="bottom" secondItem="ds7-Gy-iCf" secondAttribute="bottom" constant="20" id="9je-ch-wv1"/>
+                    <constraint firstAttribute="trailing" secondItem="akZ-rw-4DN" secondAttribute="trailing" constant="20" id="Cfx-z4-LHP"/>
+                    <constraint firstAttribute="bottom" secondItem="akZ-rw-4DN" secondAttribute="bottom" constant="17" id="Lfj-pl-d8V"/>
+                    <constraint firstItem="ds7-Gy-iCf" firstAttribute="leading" secondItem="se5-gp-TjO" secondAttribute="leading" constant="20" id="Oiq-Mi-akL"/>
+                    <constraint firstItem="lBN-D7-w3v" firstAttribute="top" secondItem="se5-gp-TjO" secondAttribute="top" constant="20" symbolic="YES" id="Tff-Kv-jVJ"/>
+                    <constraint firstItem="lBN-D7-w3v" firstAttribute="baseline" secondItem="7Xs-La-KTG" secondAttribute="baseline" id="Xy2-3q-dfE"/>
+                    <constraint firstItem="lBN-D7-w3v" firstAttribute="leading" secondItem="se5-gp-TjO" secondAttribute="leading" constant="20" id="mEY-uu-OJI"/>
+                    <constraint firstItem="akZ-rw-4DN" firstAttribute="leading" secondItem="NK7-R1-opa" secondAttribute="trailing" constant="12" id="uqH-l3-iqX"/>
+                    <constraint firstAttribute="bottom" secondItem="NK7-R1-opa" secondAttribute="bottom" constant="17" id="vGv-BU-2Gm"/>
+                </constraints>
+            </view>
+            <connections>
+                <outlet property="delegate" destination="-2" id="0bl-1N-AYu"/>
+            </connections>
+            <point key="canvasLocation" x="123" y="60.5"/>
+        </window>
+    </objects>
+</document>
