@@ -61,6 +61,7 @@ class KingsAPI {
         
         do {
             response = try decoder.decode(KCLCalendarResponse.self, from: data)
+            print(response)
             let items = response?.calendar.items.sorted(by: {$0.start < $1.start})
             response?.calendar.items = items!
             return response

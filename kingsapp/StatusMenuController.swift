@@ -183,6 +183,10 @@ class StatusMenuController: NSObject, PreferencesWindowDelegate {
         var insertIndex = 0
         
         // Instantiate header
+        if (currentCalendar == nil) {
+            return
+        }
+        
         let firstItem = currentCalendar?.calendar.items[0]
         //print(currentCalendar)
         let calendarDivider = CalendarDivider.initWithData(title: formatDividerDate(date: (firstItem?.start)!), isFirst: true, isLast: false)
