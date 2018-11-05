@@ -27,6 +27,7 @@
 		417384E321604EF3009D09F6 /* CalendarViewItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 417384E221604EF3009D09F6 /* CalendarViewItem.xib */; };
 		417384E521605F3A009D09F6 /* CalendarDivider.xib in Resources */ = {isa = PBXBuildFile; fileRef = 417384E421605F3A009D09F6 /* CalendarDivider.xib */; };
 		417384E72160603C009D09F6 /* CalendarDivider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417384E62160603C009D09F6 /* CalendarDivider.swift */; };
+		41A88899219082430046D434 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A88898219082430046D434 /* Utils.swift */; };
 		41BDC5572161C005006EFDF6 /* LaunchAgent.plist in Resources */ = {isa = PBXBuildFile; fileRef = 41BDC5562161C005006EFDF6 /* LaunchAgent.plist */; };
 		41F8AC2C215FCEBA009693BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F8AC2B215FCEBA009693BF /* AppDelegate.swift */; };
 		41F8AC2E215FCEBB009693BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41F8AC2D215FCEBB009693BF /* Assets.xcassets */; };
@@ -66,6 +67,7 @@
 		417384E221604EF3009D09F6 /* CalendarViewItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalendarViewItem.xib; sourceTree = "<group>"; };
 		417384E421605F3A009D09F6 /* CalendarDivider.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalendarDivider.xib; sourceTree = "<group>"; };
 		417384E62160603C009D09F6 /* CalendarDivider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarDivider.swift; sourceTree = "<group>"; };
+		41A88898219082430046D434 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		41BDC5562161C005006EFDF6 /* LaunchAgent.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = LaunchAgent.plist; sourceTree = "<group>"; };
 		41F8AC28215FCEBA009693BF /* KingsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KingsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41F8AC2B215FCEBA009693BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 				417384BD215FE0D3009D09F6 /* XMLParsing */,
 				41F8AC2B215FCEBA009693BF /* AppDelegate.swift */,
 				417384B9215FD704009D09F6 /* StatusMenuController.swift */,
+				41A88898219082430046D434 /* Utils.swift */,
 				417384BB215FD89F009D09F6 /* KingsAPI.swift */,
 				417384E021604D66009D09F6 /* CalendarViewItem.swift */,
 				417384E221604EF3009D09F6 /* CalendarViewItem.xib */,
@@ -170,6 +173,7 @@
 				41F8AC25215FCEBA009693BF /* Frameworks */,
 				41F8AC26215FCEBA009693BF /* Resources */,
 				414A1C2F2161B4C200EE35C4 /* CopyFiles */,
+				41A88897219081C40046D434 /* Incremental Build */,
 			);
 			buildRules = (
 			);
@@ -234,6 +238,27 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		41A88897219081C40046D434 /* Incremental Build */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Incremental Build";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "buildNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\")\nbuildNumber=$(($buildNumber + 1))\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		41F8AC24215FCEBA009693BF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -256,6 +281,7 @@
 				417384CE215FE0D4009D09F6 /* EncodingErrorExtension.swift in Sources */,
 				417384D7215FE0D4009D09F6 /* XMLKey.swift in Sources */,
 				417384D4215FE0D4009D09F6 /* XMLDecodingStorage.swift in Sources */,
+				41A88899219082430046D434 /* Utils.swift in Sources */,
 				417384D3215FE0D4009D09F6 /* XMLKeyedDecodingContainer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

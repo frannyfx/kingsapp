@@ -61,7 +61,6 @@ class KingsAPI {
         
         do {
             response = try decoder.decode(KCLCalendarResponse.self, from: data)
-            print(response)
             let items = response?.calendar.items.sorted(by: {$0.start < $1.start})
             response?.calendar.items = items!
             return response
@@ -89,8 +88,6 @@ class KingsAPI {
     }
     
     func testCredentials (username: String, password: String, completion: @escaping(Bool)->()) {
-        
-        print("\(username) \(password) \(APP_TOKEN)")
         let session = URLSession.shared
         let url = URL(string: BASE_URL)
         

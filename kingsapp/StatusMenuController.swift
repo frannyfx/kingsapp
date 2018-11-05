@@ -13,6 +13,7 @@ class StatusMenuController: NSObject, PreferencesWindowDelegate {
     @IBOutlet weak var statusMenu: NSMenu!
     let statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.squareLength)
     
+    // Menu items and actions
     @IBOutlet weak var refreshItem: NSMenuItem!
     @IBOutlet weak var lastRefreshItem: NSMenuItem!
     @IBAction func refreshClicked(_ sender: Any) {
@@ -22,6 +23,10 @@ class StatusMenuController: NSObject, PreferencesWindowDelegate {
     
     @IBAction func preferencesClicked(_ sender: Any) {
         preferencesWindow.showWindow(nil)
+    }
+    
+    @IBAction func checkForUpdatesClicked(_ sender: Any) {
+        self.checkForUpdatesAndPrompt()
     }
     
     // Utils
@@ -39,6 +44,7 @@ class StatusMenuController: NSObject, PreferencesWindowDelegate {
     }()
     
     // KCL
+    let utils = Utils()
     let kingsAPI = KingsAPI()
     var currentCalendar: KingsAPI.KCLCalendarResponse? = nil
     var calendarLastRefresh: Date? = nil
@@ -58,6 +64,9 @@ class StatusMenuController: NSObject, PreferencesWindowDelegate {
             icon?.isTemplate = true
             button.image = icon
         }
+        
+        // Check for updates
+        self.checkForUpdatesAndPrompt()
         
         // Grab calendar from cache
         currentCalendar = loadCachedCalendar()
@@ -80,6 +89,25 @@ class StatusMenuController: NSObject, PreferencesWindowDelegate {
         }
     }
     
+    func checkForUpdatesAndPrompt() {
+        self.utils.checkForUpdates() { (updateAvailable) -> () in
+            DispatchQueue.main.async { [unowned self] in
+                print("Update available:", updateAvailable)
+                if updateAvailable {
+                    let alert = NSAlert()
+                    alert.informativeText = "There's an update available."
+                    alert.messageText = "Update available."
+                    alert.alertStyle = .warning
+                    alert.addButton(withTitle: "Update now")
+                    alert.addButton(withTitle: "Remind me later")
+                    if alert.runModal() == NSApplication.ModalResponse.alertFirstButtonReturn {
+                        NSWorkspace.shared.open(URL(string: "https://github.com/frannyfx/kingsapp/releases")!)
+                    }
+                }
+            }
+        }
+    }
+    
     func registerLaunchAgent () {
         let plistPath = NSString(string: "~/Library/LaunchAgents/vx.kingsapp.plist").expandingTildeInPath
         if FileManager.default.fileExists(atPath: plistPath) {
@@ -99,7 +127,7 @@ class StatusMenuController: NSObject, PreferencesWindowDelegate {
     @objc func updateUI () {
         DispatchQueue.main.async { [unowned self] in
             if self.calendarLastRefresh != nil {
-                self.lastRefreshItem.title = "Last updated " + self.timeAgoSinceDate(self.calendarLastRefresh!, currentDate: Date(), numericDates: false).lowercased() + "."
+                self.lastRefreshItem.title = "Last refreshed " + self.utils.timeAgoSinceDate(self.calendarLastRefresh!, currentDate: Date(), numericDates: false).lowercased() + "."
             } else {
                 self.lastRefreshItem.title = "Not yet refreshed."
             }
@@ -315,68 +343,6 @@ class StatusMenuController: NSObject, PreferencesWindowDelegate {
         }
         
         return startDate!
-    }
-    
-    func timeAgoSinceDate(_ date:Date, currentDate:Date, numericDates:Bool) -> String {
-        let calendar = Calendar.current
-        let now = currentDate
-        let earliest = (now as NSDate).earlierDate(date)
-        let latest = (earliest == now) ? date : now
-        let components:DateComponents = (calendar as NSCalendar).components([NSCalendar.Unit.minute , NSCalendar.Unit.hour , NSCalendar.Unit.day , NSCalendar.Unit.weekOfYear , NSCalendar.Unit.month , NSCalendar.Unit.year , NSCalendar.Unit.second], from: earliest, to: latest, options: NSCalendar.Options())
-        
-        if (components.year! >= 2) {
-            return "\(components.year!) years ago"
-        } else if (components.year! >= 1){
-            if (numericDates){
-                return "1 year ago"
-            } else {
-                return "Last year"
-            }
-        } else if (components.month! >= 2) {
-            return "\(components.month!) months ago"
-        } else if (components.month! >= 1){
-            if (numericDates){
-                return "1 month ago"
-            } else {
-                return "Last month"
-            }
-        } else if (components.weekOfYear! >= 2) {
-            return "\(components.weekOfYear!) weeks ago"
-        } else if (components.weekOfYear! >= 1){
-            if (numericDates){
-                return "1 week ago"
-            } else {
-                return "Last week"
-            }
-        } else if (components.day! >= 2) {
-            return "\(components.day!) days ago"
-        } else if (components.day! >= 1){
-            if (numericDates){
-                return "1 day ago"
-            } else {
-                return "Yesterday"
-            }
-        } else if (components.hour! >= 2) {
-            return "\(components.hour!) hours ago"
-        } else if (components.hour! >= 1){
-            if (numericDates){
-                return "1 hour ago"
-            } else {
-                return "An hour ago"
-            }
-        } else if (components.minute! >= 2) {
-            return "\(components.minute!) minutes ago"
-        } else if (components.minute! >= 1){
-            if (numericDates){
-                return "1 minute ago"
-            } else {
-                return "A minute ago"
-            }
-        } else if (components.second! >= 3) {
-            return "\(components.second!) seconds ago"
-        } else {
-            return "Just now"
-        }
     }
     
     @IBAction func quitClicked(_ sender: NSMenuItem) {
