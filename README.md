@@ -21,5 +21,6 @@ KingsApp is a macOS menu bar app which shows lectures and tutorials for King's C
 
 ## Screenshots
 The UI reacts to macOS 10.14 Mojave's light/dark modes automatically.
+
 ![Light mode screenshot.](/docs/img/light.png)
 ![Light mode screenshot.](/docs/img/dark.png)
