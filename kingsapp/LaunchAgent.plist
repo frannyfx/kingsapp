@@ -8,6 +8,8 @@
         <string>/Applications/kingsapp.app/Contents/MacOS/kingsapp</string>
         <key>KeepAlive</key>
         <dict>
+            <key>Crashed</key>
+            <false/>
             <key>SuccessfulExit</key>
             <false/>
         </dict>

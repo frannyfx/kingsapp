@@ -21,7 +21,7 @@
             <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="196" y="240" width="448" height="97"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
             <view key="contentView" wantsLayer="YES" id="se5-gp-TjO">
                 <rect key="frame" x="0.0" y="0.0" width="448" height="97"/>
                 <autoresizingMask key="autoresizingMask"/>
@@ -71,6 +71,14 @@
                             </allowedInputSourceLocales>
                         </secureTextFieldCell>
                     </secureTextField>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ffE-Ed-kn7">
+                        <rect key="frame" x="44" y="20" width="128" height="17"/>
+                        <textFieldCell key="cell" lineBreakMode="clipping" title="Created by frannyfx." id="fZi-2H-bIF">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
                 </subviews>
                 <constraints>
                     <constraint firstItem="7Xs-La-KTG" firstAttribute="leading" secondItem="lBN-D7-w3v" secondAttribute="trailing" constant="8" symbolic="YES" id="1k9-97-Wzh"/>
@@ -79,7 +87,9 @@
                     <constraint firstAttribute="trailing" secondItem="akZ-rw-4DN" secondAttribute="trailing" constant="20" id="Cfx-z4-LHP"/>
                     <constraint firstAttribute="bottom" secondItem="akZ-rw-4DN" secondAttribute="bottom" constant="17" id="Lfj-pl-d8V"/>
                     <constraint firstItem="ds7-Gy-iCf" firstAttribute="leading" secondItem="se5-gp-TjO" secondAttribute="leading" constant="20" id="Oiq-Mi-akL"/>
+                    <constraint firstAttribute="bottom" secondItem="ffE-Ed-kn7" secondAttribute="bottom" constant="20" id="RS8-v4-qTF"/>
                     <constraint firstItem="lBN-D7-w3v" firstAttribute="top" secondItem="se5-gp-TjO" secondAttribute="top" constant="20" symbolic="YES" id="Tff-Kv-jVJ"/>
+                    <constraint firstItem="ffE-Ed-kn7" firstAttribute="leading" secondItem="ds7-Gy-iCf" secondAttribute="trailing" constant="10" id="UoH-5O-bbD"/>
                     <constraint firstItem="lBN-D7-w3v" firstAttribute="baseline" secondItem="7Xs-La-KTG" secondAttribute="baseline" id="Xy2-3q-dfE"/>
                     <constraint firstItem="lBN-D7-w3v" firstAttribute="leading" secondItem="se5-gp-TjO" secondAttribute="leading" constant="20" id="mEY-uu-OJI"/>
                     <constraint firstItem="akZ-rw-4DN" firstAttribute="leading" secondItem="NK7-R1-opa" secondAttribute="trailing" constant="12" id="uqH-l3-iqX"/>

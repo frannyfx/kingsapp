@@ -46,11 +46,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		413A27932161B9AA00ED00E7 /* HelperAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperAppDelegate.swift; sourceTree = "<group>"; };
-		413A27952161B9AA00ED00E7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		413A27982161B9AA00ED00E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		413A279A2161B9AA00ED00E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		413A279B2161B9AA00ED00E7 /* kingslauncher.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = kingslauncher.entitlements; sourceTree = "<group>"; };
 		414A1C1721619EB400EE35C4 /* PrefsWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefsWindow.swift; sourceTree = "<group>"; };
 		414A1C1821619EB400EE35C4 /* PrefsWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PrefsWindow.xib; sourceTree = "<group>"; };
 		417384B9215FD704009D09F6 /* StatusMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusMenuController.swift; sourceTree = "<group>"; };
@@ -91,18 +86,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		413A27922161B9AA00ED00E7 /* kingslauncher */ = {
-			isa = PBXGroup;
-			children = (
-				413A27932161B9AA00ED00E7 /* HelperAppDelegate.swift */,
-				413A27952161B9AA00ED00E7 /* Assets.xcassets */,
-				413A27972161B9AA00ED00E7 /* MainMenu.xib */,
-				413A279A2161B9AA00ED00E7 /* Info.plist */,
-				413A279B2161B9AA00ED00E7 /* kingslauncher.entitlements */,
-			);
-			path = kingslauncher;
-			sourceTree = "<group>";
-		};
 		417384BD215FE0D3009D09F6 /* XMLParsing */ = {
 			isa = PBXGroup;
 			children = (
@@ -142,7 +125,6 @@
 			isa = PBXGroup;
 			children = (
 				41F8AC2A215FCEBA009693BF /* kingsapp */,
-				413A27922161B9AA00ED00E7 /* kingslauncher */,
 				41F8AC29215FCEBA009693BF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -281,14 +263,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		413A27972161B9AA00ED00E7 /* MainMenu.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				413A27982161B9AA00ED00E7 /* Base */,
-			);
-			name = MainMenu.xib;
-			sourceTree = "<group>";
-		};
 		41F8AC2F215FCEBB009693BF /* MainMenu.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
