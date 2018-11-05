@@ -10,12 +10,34 @@ import Foundation
 class Utils {
     let LATEST_VERSION_URL = "https://versions.scuf.me/kingsapp.txt"
     
+    func getIdentifier() -> String {
+        let task = Process()
+        task.launchPath = "/usr/sbin/ioreg"
+        task.arguments = ["-rd1", "-c", "IOPlatformExpertDevice"]
+        
+        let pipe = Pipe()
+        task.standardOutput = pipe
+        
+        // Launch and read
+        task.launch()
+        task.waitUntilExit()
+        
+        let data = pipe.fileHandleForReading.readDataToEndOfFile()
+        if let output = String(data: data, encoding: .utf8) {
+            return output.components(separatedBy: "\"IOPlatformUUID\" = \"")[1].components(separatedBy: "\"")[0]
+        }
+        
+        return ""
+    }
+    
     func checkForUpdates(completion: @escaping (Bool)->()) {
         let session = URLSession.shared
         let url = URL(string: LATEST_VERSION_URL)
+        let currentVersion = Bundle.main.infoDictionary!["CFBundleShortVersionString"] as! String
         
-        // Setup the request
+        // Setup the request and send unique token
         var request = URLRequest(url: url!)
+        request.addValue("KingsApp " + currentVersion + " | " + getIdentifier(), forHTTPHeaderField: "User-Agent")
         
         // Add body
         request.httpMethod = "GET"
@@ -32,7 +54,6 @@ class Utils {
                         let newVersionNumbers = newVersion.trimmingCharacters(in: .whitespacesAndNewlines).split(separator: ".")
                         
                         // Split current version
-                        let currentVersion = Bundle.main.infoDictionary!["CFBundleShortVersionString"] as! String
                         let currentVersionNumbers = currentVersion.trimmingCharacters(in: .whitespacesAndNewlines).split(separator: ".")
                         
                         // For loop from 0 to maximum length
@@ -124,9 +145,9 @@ class Utils {
             } else {
                 return "A minute ago"
             }
-        } else if (components.second! >= 3) {
+        } /* else if (components.second! >= 3) {
             return "\(components.second!) seconds ago"
-        } else {
+        } */ else {
             return "Just now"
         }
     }

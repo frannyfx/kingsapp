@@ -48,6 +48,7 @@ class StatusMenuController: NSObject, PreferencesWindowDelegate {
     let kingsAPI = KingsAPI()
     var currentCalendar: KingsAPI.KCLCalendarResponse? = nil
     var calendarLastRefresh: Date? = nil
+    var lastUpdateCheck: Date? = nil
     var username: String? = nil
     var password: String? = nil
     
@@ -65,8 +66,13 @@ class StatusMenuController: NSObject, PreferencesWindowDelegate {
             button.image = icon
         }
         
+        // Get identifier
+        print(self.utils.getIdentifier())
+        
         // Check for updates
-        self.checkForUpdatesAndPrompt(promptIfUnavailable: false)
+        if needsToCheckForUpdate() {
+            self.checkForUpdatesAndPrompt(promptIfUnavailable: false)
+        }
         
         // Grab calendar from cache
         currentCalendar = loadCachedCalendar()
@@ -91,6 +97,12 @@ class StatusMenuController: NSObject, PreferencesWindowDelegate {
     
     func checkForUpdatesAndPrompt(promptIfUnavailable: Bool) {
         self.utils.checkForUpdates() { (updateAvailable) -> () in
+            // Save that we updated now
+            self.lastUpdateCheck = Date()
+            self.userDefaults.set(self.dateFormatter.string(from: self.lastUpdateCheck!), forKey: "lastUpdateCheck")
+            self.userDefaults.synchronize()
+            
+            // Handle UI on main queue
             DispatchQueue.main.async { [unowned self] in
                 print("Update available:", updateAvailable)
                 let alert = NSAlert()
@@ -136,12 +148,16 @@ class StatusMenuController: NSObject, PreferencesWindowDelegate {
             } else {
                 self.lastRefreshItem.title = "Not yet refreshed."
             }
+            
+            if self.needsToCheckForUpdate() {
+                print("Need to check for update...")
+                self.checkForUpdatesAndPrompt(promptIfUnavailable: false)
+            }
         }
         
         if self.uiTimer == nil {
-            self.uiTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.updateUI), userInfo: nil, repeats: true)
+            self.uiTimer = Timer.scheduledTimer(timeInterval: 60, target: self, selector: #selector(self.updateUI), userInfo: nil, repeats: true)
         }
-        
     }
     
     func preferencesDidUpdate() {
@@ -175,6 +191,24 @@ class StatusMenuController: NSObject, PreferencesWindowDelegate {
         }
         
         return nil
+    }
+    
+    func needsToCheckForUpdate() -> Bool {
+        // Don't load it from disk if it's cached
+        if self.lastUpdateCheck == nil {
+            self.lastUpdateCheck = dateFormatter.date(from: userDefaults.object(forKey: "lastUpdateCheck") as! String)
+            if lastUpdateCheck == nil {
+                return true
+            }
+        }
+        
+        // Create threshold date
+        let currentDate = Date()
+        let hoursThreshold = 8
+        var components = DateComponents()
+        components.hour = -1 * hoursThreshold
+        let thresholdDate = NSCalendar.current.date(byAdding: components, to: currentDate)
+        return !(self.lastUpdateCheck! > thresholdDate!)
     }
     
     func loadCredentials() {
