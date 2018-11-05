@@ -28,16 +28,20 @@ class CalendarViewItem: NSView {
             let timespan = end.timeIntervalSince(start)
             let hours = Int(timespan / 3600)
             let minutes = Int((timespan - Double(hours * 3600)) / 60)
-            var lectureLengthString = "\(hours)"
+            var lectureLengthString = ""
             
             if hours == 1 {
-                lectureLengthString += " hour"
-            } else {
-                lectureLengthString += " hours"
+                lectureLengthString += "\(hours) hour"
+            } else if hours != 0 {
+                lectureLengthString += "\(hours) hours"
             }
             
             if minutes != 0 {
-                lectureLengthString += "and \(minutes) minutes"
+                if hours != 0 {
+                    lectureLengthString += "and \(minutes) minutes"
+                } else {
+                    lectureLengthString += "\(minutes) minutes"
+                }
             }
             
             view?.infoLabel.stringValue = "\(lectureLengthString) - \(location)"
