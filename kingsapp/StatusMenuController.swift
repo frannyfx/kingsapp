@@ -26,7 +26,7 @@ class StatusMenuController: NSObject, PreferencesWindowDelegate {
     }
     
     @IBAction func checkForUpdatesClicked(_ sender: Any) {
-        self.checkForUpdatesAndPrompt()
+        self.checkForUpdatesAndPrompt(promptIfUnavailable: true)
     }
     
     // Utils
@@ -66,7 +66,7 @@ class StatusMenuController: NSObject, PreferencesWindowDelegate {
         }
         
         // Check for updates
-        self.checkForUpdatesAndPrompt()
+        self.checkForUpdatesAndPrompt(promptIfUnavailable: false)
         
         // Grab calendar from cache
         currentCalendar = loadCachedCalendar()
@@ -89,12 +89,12 @@ class StatusMenuController: NSObject, PreferencesWindowDelegate {
         }
     }
     
-    func checkForUpdatesAndPrompt() {
+    func checkForUpdatesAndPrompt(promptIfUnavailable: Bool) {
         self.utils.checkForUpdates() { (updateAvailable) -> () in
             DispatchQueue.main.async { [unowned self] in
                 print("Update available:", updateAvailable)
+                let alert = NSAlert()
                 if updateAvailable {
-                    let alert = NSAlert()
                     alert.informativeText = "There's an update available."
                     alert.messageText = "Update available."
                     alert.alertStyle = .warning
@@ -103,6 +103,11 @@ class StatusMenuController: NSObject, PreferencesWindowDelegate {
                     if alert.runModal() == NSApplication.ModalResponse.alertFirstButtonReturn {
                         NSWorkspace.shared.open(URL(string: "https://github.com/frannyfx/kingsapp/releases")!)
                     }
+                } else if (promptIfUnavailable) {
+                    alert.informativeText = "KingsApp is up to date."
+                    alert.messageText = "Up to date."
+                    alert.alertStyle = .warning
+                    alert.runModal()
                 }
             }
         }
