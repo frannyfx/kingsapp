@@ -2,8 +2,8 @@
 KingsApp is a macOS menu bar app which shows lectures and tutorials for King's College London, based on intercepted tokens from the official KCL app. It contains a LaunchAgent installer which allows it to start automatically upon login.
 
 ## How to build
-- Clone the project
-- Build with Xcode
+- Clone the project.
+- Build with Xcode.
 
 ## How to install
 - Download the latest stable release from the [Releases](https://github.com/frannyfx/kingsapp/releases) page.
