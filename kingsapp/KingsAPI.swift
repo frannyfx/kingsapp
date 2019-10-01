@@ -8,7 +8,7 @@
 
 import Foundation
 class KingsAPI {
-    let BASE_URL = "https://campusm.kcl.ac.uk//kcl_live/services/CampusMUniversityService/retrieveCalendar"
+    let BASE_URL = "https://campusm.kcl.ac.uk//kclNewTimetable/services/CampusMUniversityService/retrieveCalendar"
     let NAMESPACE = "http://campusm.gw.com/campusm"
     let APP_TOKEN = "YXBwbGljYXRpb25fc2VjX3VzZXI6ZjJnaDUzNDg="
     
@@ -57,7 +57,7 @@ class KingsAPI {
     func parseCalendarResponse (data: Data) -> KCLCalendarResponse? {
         let decoder = XMLDecoder()
         decoder.dateDecodingStrategy = .formatted(formatter)
-        let response: KCLCalendarResponse?
+        var response: KCLCalendarResponse?
         
         do {
             response = try decoder.decode(KCLCalendarResponse.self, from: data)
