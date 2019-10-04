@@ -8,7 +8,7 @@
 
 import Foundation
 class Utils {
-    let LATEST_VERSION_URL = "https://versions.scuf.me/kingsapp.txt"
+    let LATEST_VERSION_URL = "https://frannyfx.github.io/kingsapp/version.txt"
     
     func getIdentifier() -> String {
         let task = Process()
