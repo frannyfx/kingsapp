@@ -194,12 +194,10 @@ class StatusMenuController: NSObject, PreferencesWindowDelegate {
     }
     
     func needsToCheckForUpdate() -> Bool {
-        // Don't load it from disk if it's cached
-        if self.lastUpdateCheck == nil {
-            self.lastUpdateCheck = dateFormatter.date(from: userDefaults.object(forKey: "lastUpdateCheck") as! String)
-            if lastUpdateCheck == nil {
-                return true
-            }
+        // Check when it was last updated
+        let lastUpdateString = userDefaults.object(forKey: "lastUpdateCheck")
+        if (lastUpdateString == nil) {
+            return true;
         }
         
         // Create threshold date
@@ -208,7 +206,7 @@ class StatusMenuController: NSObject, PreferencesWindowDelegate {
         var components = DateComponents()
         components.hour = -1 * hoursThreshold
         let thresholdDate = NSCalendar.current.date(byAdding: components, to: currentDate)
-        return !(self.lastUpdateCheck! > thresholdDate!)
+        return dateFormatter.date(from: lastUpdateString as! String)! < thresholdDate!
     }
     
     func loadCredentials() {
